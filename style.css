@@ -1,0 +1,75 @@
+/* 기본 설정 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Serif', 'Noto Serif KR', serif; color: #111; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: #f9f9f9; /* 이미지 상단 밝은 배경 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.logo { font-size: 5rem; font-style: italic; margin-bottom: 2rem; }
+.logo span { color: #555; }
+.hero-text p { font-size: 1.5rem; letter-spacing: 2px; }
+.hero-text h2 { font-size: 2.5rem; font-weight: bold; }
+
+/* Models Section (Black Background) */
+.models { background: #000; color: #fff; padding: 100px 0; }
+.models h3 { font-size: 2rem; margin-bottom: 50px; border-bottom: 1px solid #333; padding-bottom: 20px; }
+
+.model-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+.model-row.reverse { flex-direction: row-reverse; }
+
+.model-info { flex: 1; }
+.model-info h4 { font-size: 3rem; margin-bottom: 10px; }
+.model-info .tags { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.model-info .tags span { border: 1px solid #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+
+.model-image {
+    flex: 1;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Process Section */
+.process { padding: 100px 0; text-align: left; background: #000; color: #fff; border-top: 1px solid #333; }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
+.step span { font-size: 2.5rem; font-weight: bold; display: block; border-bottom: 2px solid #fff; margin-bottom: 15px; }
+.step h5 { font-size: 1.5rem; margin-bottom: 10px; }
+
+/* Contact Section */
+.contact { padding: 100px 0; background: #fff; }
+.contact-wrapper { display: flex; gap: 100px; }
+.contact-text h3 { font-size: 3rem; line-height: 1.2; }
+.contact-form { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 1rem;
+}
+.contact-form button {
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* 반응형 모바일 */
+@media (max-width: 768px) {
+    .model-row, .model-row.reverse, .contact-wrapper { flex-direction: column; }
+    .process-grid { grid-template-columns: 1fr; }
+    .logo { font-size: 3rem; }
+}
