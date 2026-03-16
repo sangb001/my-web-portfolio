@@ -1,0 +1,19 @@
+.flex-container {
+    display: flex; /*정렬시작 */
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.flex-item {
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*숫자가 클수록 더 많은 공간을 차지합니다 */
+.orange { flex: 1; background-color: coral; }
+.blue   { flex: 2; background-color: dodgerblue; } /* 혼자 2배 넓음 */
+.green  { flex: 1; background-color: mediumseagreen; }

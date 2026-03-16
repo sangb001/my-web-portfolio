@@ -1,0 +1,17 @@
+.calc-container {
+    background-color: #eee;
+    padding: 20px;
+}
+
+.calc-box {
+    background-color: #ffcc00;
+    height: 100px;
+    /* 핵심: 전체 너비에서 50px만 정확히 뺍니다 */
+    width: calc(100% - 50px); 
+    /* margin-left: auto; 왼쪽 정렬*/
+    /* margin: 0 auto; 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
